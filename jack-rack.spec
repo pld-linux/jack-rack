@@ -30,7 +30,7 @@ JACK Rack is a stereo LADSPA effects rack for the JACK audio API. It
 uses GTK+ 2 (and optionally GNOME 2) for the GUI.
 
 %description -l pl
-JACK Rack jest stereofonicznym rackiem efektów LADSPA dla API
+JACK Rack jest rackiem stereofonicznych efektów LADSPA dla API
 d¼wiêkowego JACK. U¿ywa GUI opartego na GTK+ 2 (i opcjonalnie GNOME2).
 
 %prep
