@@ -35,7 +35,8 @@ uses GTK+ 2 (and optionally GNOME 2) for the GUI.
 
 %description -l pl
 JACK Rack jest rackiem stereofonicznych efektów LADSPA dla API
-d¼wiêkowego JACK. U¿ywa GUI opartego na GTK+ 2 (i opcjonalnie GNOME2).
+d¼wiêkowego JACK-a. U¿ywa GUI opartego na GTK+ 2 (i opcjonalnie
+GNOME2).
 
 %prep
 %setup -q
