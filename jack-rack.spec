@@ -17,7 +17,7 @@ URL:		http://pkl.net/~node/jack-rack.html
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 %{?with_ladcca:BuildRequires:	ladcca-devel >= 0.3.1}
 BuildRequires:	ladspa-devel >= 1.1
