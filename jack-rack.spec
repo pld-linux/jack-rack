@@ -11,6 +11,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
+# Source0-md5:	587df2c247e2bc64c269fb7a872aeb91
 Patch0:		%{name}-desktop.patch
 URL:		http://pkl.net/~node/jack-rack.html
 BuildRequires:	autoconf
