@@ -55,6 +55,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS AUTHORS README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
-%{_datadir}/applications/*.desktop
+%{_desktopdir}/*.desktop
 %attr(755,root,root) %{_datadir}/dtds/*.dtd
 %{_pixmapsdir}/*.png
