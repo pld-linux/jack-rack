@@ -1,8 +1,9 @@
 #
 # Conditional build:
 # _without_gnome	- disable GNOME2 support
+#
 Summary:	Stereo LADSPA effects rack
-Summary(pl):	Stereofoniczny rack efektów LADSPA
+Summary(pl):	Rack stereofonicznych efektów LADSPA
 Name:		jack-rack
 Version:	1.4.2
 Release:	1
@@ -14,11 +15,12 @@ Patch0:		%{name}-desktop.patch
 URL:		http://pkl.net/~node/jack-rack.html
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 BuildRequires:	ladcca-devel >= 0.3.1
 BuildRequires:	ladspa-devel >= 1.1
-%{!?_without_gnome:BuildRequires:	libgnomeui >= 2.0}
+%{!?_without_gnome:BuildRequires:	libgnomeui-devel >= 2.0}
 BuildRequires:	liblrdf-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
@@ -52,7 +54,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name} --with-gnome --all-name
 
