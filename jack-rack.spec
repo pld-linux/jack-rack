@@ -22,6 +22,7 @@ BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 %{?with_ladcca:BuildRequires:	ladcca-devel >= 0.3.1}
 BuildRequires:	ladspa-devel >= 1.1
 %{?with_gnome:BuildRequires:	libgnomeui-devel >= 2.0}
+BuildRequires:	libraptor-devel
 BuildRequires:	liblrdf-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
