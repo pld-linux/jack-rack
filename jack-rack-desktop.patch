@@ -1,0 +1,15 @@
+diff -Nur jack-rack-1.4.1/jack-rack.desktop jack-rack-1.4.1-desktop-patch/jack-rack.desktop
+--- jack-rack-1.4.1/jack-rack.desktop	Fri Jan 17 22:01:03 2003
++++ jack-rack-1.4.1-desktop-patch/jack-rack.desktop	Mon Apr 28 21:10:48 2003
+@@ -2,8 +2,10 @@
+ Encoding=UTF-8
+ Name=JACK Rack
+ Comment=Stereo LADSPA effects rack
++Comment[pl]=Stereofoniczny rack efektów LADSPA
+ Exec=jack-rack
+ Icon=jack-rack-icon.png
+ Terminal=false
+ Type=Application
+-Categories=GNOME;Application;AudioVideo;
++Categories=Application;Multimedia;
++# vi: encoding=utf-8
