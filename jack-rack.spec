@@ -1,3 +1,8 @@
+#
+# Conditional build:
+# _without_gnome	- disable GNOME2 support
+#
+# TODO(?): ladcca, lrdf
 Summary:	Stereo LADSPA effects rack
 Summary(pl):	Stereofoniczny rack efektów LADSPA
 Name:		jack-rack
@@ -10,9 +15,10 @@ Patch0:		%{name}-desktop.patch
 URL:		http://pkl.net/~node/jack-rack.html
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel
-BuildRequires:	jack-audio-connection-kit-devel
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 BuildRequires:	ladspa-devel >= 1.1
+%{!?_without_gnome:BuildRequires:	libgnomeui >= 2.0}
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
 Requires:	jack-patch-bay
@@ -27,7 +33,7 @@ JACK Rack jest stereofonicznym rackiem efektów LADSPA dla API
 d¼wiêkowego JACK. U¿ywa GUI opartego na GTK+ 2 (i opcjonalnie GNOME2).
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p1
 
 %build
@@ -37,6 +43,7 @@ rm -f missing
 %{__autoheader}
 %{__automake}
 %configure \
+	%{?_without_gnome:--disable-gnome} \
 	--disable-lrdf
 
 %{__make}
@@ -51,9 +58,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS AUTHORS README
+%doc AUTHORS BUGS NEWS README THANKS TODO
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_desktopdir}/*.desktop
-%attr(755,root,root) %{_datadir}/dtds/*.dtd
+# it seems to be the only package using this dir(?)
+%dir %{_datadir}/dtds
+%{_datadir}/dtds/*.dtd
 %{_pixmapsdir}/*.png
