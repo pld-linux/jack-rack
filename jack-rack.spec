@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _without_gnome	- disable GNOME2 support
+%bcond_without gnome	# disable GNOME2 support
+%bcond_with ladcca	# enable ladcca sesion managment support
 #
 Summary:	Stereo LADSPA effects rack
 Summary(pl):	Rack stereofonicznych efektów LADSPA
@@ -18,9 +19,9 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
-BuildRequires:	ladcca-devel >= 0.3.1
+%{?with_ladcca:BuildRequires:	ladcca-devel >= 0.3.1}
 BuildRequires:	ladspa-devel >= 1.1
-%{!?_without_gnome:BuildRequires:	libgnomeui-devel >= 2.0}
+%{?with_gnome:BuildRequires:	libgnomeui-devel >= 2.0}
 BuildRequires:	liblrdf-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	pkgconfig
@@ -47,7 +48,8 @@ rm -f missing
 %{__autoheader}
 %{__automake}
 %configure \
-	%{?_without_gnome:--disable-gnome}
+	%{!?with_gnome: --disable-gnome} \
+	%{!?with_ladcca: --disable-ladcca}
 
 %{__make}
 
