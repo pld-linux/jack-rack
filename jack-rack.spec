@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without gnome	# disable GNOME2 support
-%bcond_with ladcca	# enable ladcca sesion managment support
+%bcond_without	gnome	# disable GNOME2 support
+%bcond_with	ladcca	# enable ladcca sesion managment support
 #
 Summary:	Stereo LADSPA effects rack
 Summary(pl):	Rack stereofonicznych efektów LADSPA
