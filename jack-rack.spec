@@ -6,14 +6,14 @@
 Summary:	Stereo LADSPA effects rack
 Summary(pl):	Rack stereofonicznych efektów LADSPA
 Name:		jack-rack
-Version:	1.4.3
-Release:	2
+Version:	1.4.4
+Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
-# Source0-md5:	1880b4e91f5b043802073e865b307f8c
+Source0:	http://dl.sourceforge.net/jack-rack/%{name}-%{version}.tar.bz2
+# Source0-md5:	99f10d81e9504929c3f897d40f344fdc
 Patch0:		%{name}-desktop.patch
-URL:		http://pkl.net/~node/jack-rack.html
+URL:		http://jack-rack.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
