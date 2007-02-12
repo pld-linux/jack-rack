@@ -4,7 +4,7 @@
 %bcond_with	ladcca	# enable ladcca sesion managment support
 #
 Summary:	Stereo LADSPA effects rack
-Summary(pl):	Rack stereofonicznych efektów LADSPA
+Summary(pl.UTF-8):   Rack stereofonicznych efektÃ³w LADSPA
 Name:		jack-rack
 Version:	1.4.4
 Release:	1
@@ -33,9 +33,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 JACK Rack is a stereo LADSPA effects rack for the JACK audio API. It
 uses GTK+ 2 (and optionally GNOME 2) for the GUI.
 
-%description -l pl
-JACK Rack jest rackiem stereofonicznych efektów LADSPA dla API
-d¼wiêkowego JACK-a. U¿ywa GUI opartego na GTK+ 2 (i opcjonalnie
+%description -l pl.UTF-8
+JACK Rack jest rackiem stereofonicznych efektÃ³w LADSPA dla API
+dÅºwiÄ™kowego JACK-a. UÅ¼ywa GUI opartego na GTK+ 2 (i opcjonalnie
 GNOME2).
 
 %prep
