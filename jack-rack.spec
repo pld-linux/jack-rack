@@ -4,7 +4,7 @@
 %bcond_with	ladcca	# enable ladcca sesion managment support
 #
 Summary:	Stereo LADSPA effects rack
-Summary(pl.UTF-8):   Rack stereofonicznych efektów LADSPA
+Summary(pl.UTF-8):	Rack stereofonicznych efektów LADSPA
 Name:		jack-rack
 Version:	1.4.4
 Release:	1
