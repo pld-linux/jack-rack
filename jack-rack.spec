@@ -16,7 +16,7 @@ Patch0:		%{name}-desktop.patch
 URL:		http://jack-rack.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 %{?with_ladcca:BuildRequires:	ladcca-devel >= 0.3.1}
